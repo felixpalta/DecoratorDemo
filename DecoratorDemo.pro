@@ -8,7 +8,9 @@ SOURCES += main.cpp \
     houseblend.cpp \
     darkroast.cpp \
     decaf.cpp \
-    mocha.cpp
+    mocha.cpp \
+    soy.cpp \
+    whip.cpp
 
 *g++*{
 QMAKE_CXXFLAGS +=   -Weffc++ -std=c++11 -pedantic -Wall -Wextra \
@@ -29,4 +31,6 @@ HEADERS += \
     houseblend.h \
     darkroast.h \
     decaf.h \
-    mocha.h
+    mocha.h \
+    soy.h \
+    whip.h
