@@ -7,7 +7,8 @@ SOURCES += main.cpp \
     espresso.cpp \
     houseblend.cpp \
     darkroast.cpp \
-    decaf.cpp
+    decaf.cpp \
+    mocha.cpp
 
 *g++*{
 QMAKE_CXXFLAGS +=   -Weffc++ -std=c++11 -pedantic -Wall -Wextra \
@@ -27,4 +28,5 @@ HEADERS += \
     espresso.h \
     houseblend.h \
     darkroast.h \
-    decaf.h
+    decaf.h \
+    mocha.h
