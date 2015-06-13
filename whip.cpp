@@ -1,7 +1,7 @@
 #include "whip.h"
 
 Whip::Whip(const Beverage &bev)
-    : _beverage(bev)
+    : CondimentDecorator(bev)
 {
 
 }

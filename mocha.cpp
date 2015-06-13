@@ -1,7 +1,7 @@
 #include "mocha.h"
 
 Mocha::Mocha(const Beverage &bev)
-    : _beverage(bev)
+    : CondimentDecorator(bev)
 {
 }
 

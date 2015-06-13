@@ -5,8 +5,15 @@
 
 class CondimentDecorator : public Beverage
 {
-public:
+protected:
+    const Beverage& _beverage;
 
+    CondimentDecorator(const Beverage& bev)
+        : _beverage(bev)
+    {
+    }
+
+public:
     std::string get_description() const = 0;
 };
 

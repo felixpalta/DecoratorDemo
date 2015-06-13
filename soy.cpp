@@ -1,7 +1,7 @@
 #include "soy.h"
 
 Soy::Soy(const Beverage &bev)
-    : _beverage(bev)
+    : CondimentDecorator(bev)
 {
 
 }

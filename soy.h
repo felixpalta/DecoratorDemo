@@ -5,7 +5,6 @@
 
 class Soy : public CondimentDecorator
 {
-    const Beverage& _beverage;
 public:
     Soy(const Beverage &bev);
     std::string get_description() const;
