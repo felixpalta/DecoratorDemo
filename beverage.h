@@ -9,9 +9,9 @@
 
 class Beverage
 {
-    std::string _description;
-
 protected:
+    std::string _description = "Unknown Beverage";
+
     Beverage() = default;
     virtual ~Beverage() = default;
 

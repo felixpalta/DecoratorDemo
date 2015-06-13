@@ -4,6 +4,10 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
+    espresso.cpp \
+    houseblend.cpp \
+    darkroast.cpp \
+    decaf.cpp
 
 *g++*{
 QMAKE_CXXFLAGS +=   -Weffc++ -std=c++11 -pedantic -Wall -Wextra \
@@ -20,4 +24,7 @@ QMAKE_CXXFLAGS +=   -Weffc++ -std=c++11 -pedantic -Wall -Wextra \
 HEADERS += \
     beverage.h \
     condimentdecorator.h \
-
+    espresso.h \
+    houseblend.h \
+    darkroast.h \
+    decaf.h
