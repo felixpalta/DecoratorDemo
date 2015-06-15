@@ -10,7 +10,8 @@ SOURCES += main.cpp \
     decaf.cpp \
     mocha.cpp \
     soy.cpp \
-    whip.cpp
+    whip.cpp \
+    beveragefactory.cpp
 
 *g++*{
 QMAKE_CXXFLAGS +=   -Weffc++ -std=c++11 -pedantic -Wall -Wextra \
@@ -33,4 +34,5 @@ HEADERS += \
     decaf.h \
     mocha.h \
     soy.h \
-    whip.h
+    whip.h \
+    beveragefactory.h

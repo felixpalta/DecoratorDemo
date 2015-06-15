@@ -6,7 +6,7 @@
 class Mocha : public CondimentDecorator
 {
 public:
-    Mocha(const Beverage& bev);
+    Mocha(const Beverage* bev);
     std::string get_description() const;
     double cost() const;
 };

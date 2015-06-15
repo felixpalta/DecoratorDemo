@@ -6,7 +6,7 @@
 class Whip : public CondimentDecorator
 {
 public:
-    Whip(const Beverage &bev);
+    Whip(const Beverage* bev);
     std::string get_description() const;
     double cost() const;
 };

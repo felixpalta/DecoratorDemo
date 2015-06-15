@@ -6,7 +6,7 @@
 class Soy : public CondimentDecorator
 {
 public:
-    Soy(const Beverage &bev);
+    Soy(const Beverage* bev);
     std::string get_description() const;
     double cost() const;
 };

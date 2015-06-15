@@ -1,6 +1,6 @@
 #include "soy.h"
 
-Soy::Soy(const Beverage &bev)
+Soy::Soy(const Beverage* bev)
     : CondimentDecorator(bev)
 {
 
@@ -8,9 +8,9 @@ Soy::Soy(const Beverage &bev)
 
 std::string Soy::get_description() const
 {
-    return _beverage.get_description() + ", Soy";
+    return _beverage->get_description() + ", Soy";
 }
 double Soy::cost() const
 {
-    return _beverage.cost() + .15;
+    return _beverage->cost() + .15;
 }

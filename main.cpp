@@ -1,27 +1,32 @@
 #include <iostream>
-#include "darkroast.h"
-#include "decaf.h"
-#include "houseblend.h"
-#include "espresso.h"
-#include "mocha.h"
-#include "soy.h"
-#include "whip.h"
+#include "beveragefactory.h"
 
 using namespace std;
 
+void print_beverage(const Beverage& bev)
+{
+    cout << bev.get_description() << ": " << bev.cost() << endl;
+}
+
 int main()
 {
-    Beverage *decaf = new Decaf();
-    cout << decaf->get_description() << ": " << decaf->cost() << endl;
 
-    decaf = new Mocha(*decaf);
-    cout << decaf->get_description() << ": " << decaf->cost() << endl;
+    BeverageFactory bf;
 
-    decaf = new Soy(*decaf);
-    cout << decaf->get_description() << ": " << decaf->cost() << endl;
+    auto bev = bf.get_new_beverage(BeverageFactory::DECAF);
 
-    decaf = new Whip(*decaf);
-    cout << decaf->get_description() << ": " << decaf->cost() << endl;
+    if (bev)
+        print_beverage(*bev);
+
+    bf.add_condiment(bev, BeverageFactory::MOCHA);
+
+    if (bev)
+        print_beverage(*bev);
+
+    bf.add_condiment(bev, BeverageFactory::SOY);
+
+    if (bev)
+        print_beverage(*bev);
 
     return 0;
 }

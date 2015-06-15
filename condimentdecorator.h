@@ -2,13 +2,14 @@
 #define CONDIMENTDECORATOR_H
 
 #include "beverage.h"
+#include <memory>
 
 class CondimentDecorator : public Beverage
 {
 protected:
-    const Beverage& _beverage;
+    std::unique_ptr<const Beverage> _beverage;
 
-    CondimentDecorator(const Beverage& bev)
+    CondimentDecorator(const Beverage* bev)
         : _beverage(bev)
     {
     }

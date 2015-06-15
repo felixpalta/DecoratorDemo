@@ -13,9 +13,10 @@ protected:
     std::string _description = "Unknown Beverage";
 
     Beverage() = default;
-    virtual ~Beverage() = default;
 
 public:
+    virtual ~Beverage() = default;
+
     virtual std::string get_description() const
     {
         return _description;
